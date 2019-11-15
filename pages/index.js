@@ -7,9 +7,7 @@ import ThemeContext from '../components/ThemeContext';
 
 export default function Index(props) {
   const [localFeeds, setLocalFeeds] = useState([]);
-
   const [formVisible, setFormVisible] = useState(false);
-
   const [newFeedTitle, setNewFeedTitle] = useState('');
   const [newFeedWebsite, setNewFeedWebsite] = useState('');
   const [newFeedUrl, setNewFeedUrl] = useState('');
@@ -71,7 +69,7 @@ const themeIsDark = useContext(ThemeContext) === 'dark';
         className="toggle-visibility"
         title={!formVisible ? `Add Feed` : `---`}
         onClick={() => setFormVisible(!formVisible)}>
-        {formVisible ? '-' : '+'}
+        <i className={`fa fa-${formVisible ? `minus` : `plus`}-circle`}></i>
       </button>
       <div className={`add-feed ${themeIsDark ? 'dark' : ''}`}>
         <div className={`feed-form ${!formVisible ? `unvisible` : ``}`}>

@@ -64,10 +64,12 @@ const PostList = ({posts, slug}) => {
             <div className="preview">
               <p>{post.preview}</p>
               <a href={post.link} title="Visit" target="_blank">
-                <button>🔗</button>
+                <button>
+                  <i className="fa fa-link"></i>
+                  </button>
               </a>
               <button title="Read" onClick={() => setIndexOpen(i)}>
-                📄
+                <i className="fa fa-eye"></i>
               </button>
               {
                 // <div style={{display: i === indexOpen ? 'block' : 'none'}}>

@@ -17,21 +17,32 @@ const FeedList = ({feeds, onDelete}) => {
               }}>
               </div>
               <b>
-                <div>{feed.title}</div>
+                <div className="feed-title">{feed.title}</div>
               </b>
-                <button onClick={() => handleDelete(i)}>DEL</button>
+                <button onClick={() => handleDelete(i)}>
+                  <i className="fa fa-trash-o"></i>
+                </button>
           </div>
             </Link>
         );
       })}
 
       <style jsx>{`
+        button {
+          position: relative;
+          bottom: 185px;
+          left: 90px;
+        }
+        .feed-title {
+          font-size: 15px;
+          padding: 10px;
+        }
         .feeds {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          margin-bottom: 50px;
-          flex-direction: column;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          // flex-wrap: wrap;
+          // justify-content: space-between;
+          // flex-direction: column;
           margin: 0 auto;
           text-align: center;
         }
@@ -43,12 +54,13 @@ const FeedList = ({feeds, onDelete}) => {
           border-radius: 4px;
           align-items: center;
           border-color: transparent;
-          display: flex;
-          justify-content: space-between;
+          // display: flex;
+          // justify-content: space-between;
         }
         .feed-img-div {
-          width: 120px; 
-          height: 120px; 
+          width: 140px; 
+          height: 140px; 
+          margin: 0 auto;
           border-radius: 5px;
           background-position: center;
           background-repeat: no-repeat;
@@ -66,15 +78,20 @@ const FeedList = ({feeds, onDelete}) => {
           line-height: 1.5;
         }
         @media (max-width: 600px) {
-          .feed {
+          .feeds {
+            display: flex;
             flex-direction: column;
           }
-          .feed-img-div {
-           margin: 10px; 
+          .feed {
+            display: flex;
+            flex-direction: column;
           }
-          .feed b {
-            margin: 10px;
-          }
+          // .feed-img-div {
+          //  margin: 10px; 
+          // }
+          // .feed b {
+          //   margin: 10px;
+          // }
 
         }
       `}</style>

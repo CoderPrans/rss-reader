@@ -6,6 +6,7 @@ export default class MyDocument extends Document {
       <html lang="en-US">
         <Head>
           <link rel="manifest" href="/static/manifest.json" />
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
