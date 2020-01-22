@@ -12,8 +12,8 @@ export default class MyDocument extends Document {
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="application-name" content="feed-reader" />
           <meta name="apple-mobile-web-app-title" content="feed-reader" />
-          <meta name="theme-color" content="#fff" />
-          <meta name="msapplication-navbutton-color" content="#fff" />
+          <meta name="theme-color" content="#000" />
+          <meta name="msapplication-navbutton-color" content="#000" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="black-translucent"
