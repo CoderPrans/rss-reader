@@ -4,7 +4,9 @@ import {distanceInWordsToNow} from 'date-fns';
 import striptags from 'striptags';
 
 function decodeURI(url) {
-  return url.replace(/_/g, '/');
+  url = url.replace(/]/g, '/');
+  url = url.replace(/}/g, '?');
+  return url;
 }
 
 export default async function(req, res) {

@@ -71,6 +71,12 @@ const feeds = [
     website: 'https://code.tutsplus.com',
     url: 'https://code.tutsplus.com/posts.atom',
   },
+  {
+    title: 'Jaipur Dailogues',
+    slug: 'jaipurdia',
+    website: 'https://youtube.com',
+    url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCZjxPbi3AeB6YGKCfQ2TroQ'
+  }
 ];
 
 export default feeds;

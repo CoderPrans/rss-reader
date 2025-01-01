@@ -5,7 +5,9 @@ import Page from '../../components/page';
 import PostList from '../../components/post-list';
 
 function encodeURI(url) {
-  return url.replace(/\//g, '_');
+  url = url.replace(/\//g, ']');
+  url = url.replace(/\?/g, '}')
+  return url;
 }
 
 export default class Feed extends React.Component {
@@ -32,7 +34,6 @@ export default class Feed extends React.Component {
           console.log(posts);
           this.setState({feed});
         })
-        .catch(err => console.log(err));
     }
   }
 
